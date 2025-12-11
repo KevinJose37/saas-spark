@@ -1,4 +1,17 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
 const clients = [
+  { name: "TechCorp", initials: "TC" },
+  { name: "Innovate Labs", initials: "IL" },
+  { name: "Global Solutions", initials: "GS" },
+  { name: "DataFlow", initials: "DF" },
+  { name: "CloudBase", initials: "CB" },
+  { name: "SmartSys", initials: "SS" },
   { name: "TechCorp", initials: "TC" },
   { name: "Innovate Labs", initials: "IL" },
   { name: "Global Solutions", initials: "GS" },
@@ -46,17 +59,32 @@ const ClientsSection = () => {
         </div>
 
         {/* Client Logos */}
-        <div className="mb-16 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-          {clients.map((client, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center rounded-xl bg-background p-6 shadow-sm transition-all hover:shadow-md"
-            >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-xl font-bold text-primary">
-                {client.initials}
-              </div>
-            </div>
-          ))}
+        <div className="mb-16 w-full">
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 1200,
+                stopOnInteraction: false,
+              }),
+            ]}
+            className="w-full"
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-8">
+              {clients.map((client, index) => (
+                <CarouselItem key={index} className="pl-8 basis-1/2 md:basis-1/3 lg:basis-[22%]">
+                  <div className="flex h-32 items-center justify-center rounded-xl bg-background p-6 shadow-sm transition-all hover:shadow-md">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-xl font-bold text-primary">
+                      {client.initials}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
 
         {/* Testimonials */}
