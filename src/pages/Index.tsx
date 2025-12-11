@@ -3,6 +3,7 @@ import HeroSection from "@/components/landing/HeroSection";
 import KPISection from "@/components/landing/KPISection";
 import ServicesSection from "@/components/landing/ServicesSection";
 import BenefitsSection from "@/components/landing/BenefitsSection";
+import ConstructaSection from "@/components/landing/ConstructaSection";
 import ClientsSection from "@/components/landing/ClientsSection";
 import AboutSection from "@/components/landing/AboutSection";
 import TeamSection from "@/components/landing/TeamSection";
@@ -18,6 +19,7 @@ const Index = () => {
       <KPISection />
       <ServicesSection />
       <BenefitsSection />
+      <ConstructaSection />
       <ClientsSection />
       <AboutSection />
       <TeamSection />
