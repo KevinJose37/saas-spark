@@ -1,4 +1,4 @@
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const team = [
   {
@@ -55,7 +55,7 @@ const TeamSection = () => {
               <div className="mx-auto mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent-foreground text-3xl font-bold text-primary-foreground shadow-lg">
                 {member.initials}
               </div>
-              
+
               <h3 className="mb-1 text-xl font-semibold text-foreground">
                 {member.name}
               </h3>
@@ -65,7 +65,7 @@ const TeamSection = () => {
               <p className="mb-4 text-sm text-muted-foreground">
                 {member.bio}
               </p>
-              
+
               {/* Social Links */}
               <div className="flex justify-center gap-3">
                 <a
@@ -73,12 +73,6 @@ const TeamSection = () => {
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-muted/50 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
                 >
                   <Linkedin size={18} />
-                </a>
-                <a
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-muted/50 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
-                >
-                  <Twitter size={18} />
                 </a>
               </div>
             </div>

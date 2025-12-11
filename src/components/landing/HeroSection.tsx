@@ -1,7 +1,7 @@
 import { useState } from "react";
 import heroDashboard from "@/assets/hero-dashboard.png";
 import { Button } from "@/components/ui/button";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Instagram } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -74,21 +74,9 @@ const HeroSection = () => {
           <div className="mt-8 flex items-center justify-center gap-6 lg:justify-start">
             <span className="text-sm font-medium text-primary-foreground/80">Síguenos en:</span>
             <div className="flex gap-4">
-              <a href="#" className="text-primary-foreground/70 transition-colors hover:text-primary-foreground">
-                <Facebook className="h-6 w-6" />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a href="#" className="text-primary-foreground/70 transition-colors hover:text-primary-foreground">
-                <Twitter className="h-6 w-6" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="#" className="text-primary-foreground/70 transition-colors hover:text-primary-foreground">
+              <a href="https://www.instagram.com/tecno_atom" className="text-primary-foreground/70 transition-colors hover:text-primary-foreground">
                 <Instagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
-              </a>
-              <a href="#" className="text-primary-foreground/70 transition-colors hover:text-primary-foreground">
-                <Linkedin className="h-6 w-6" />
-                <span className="sr-only">LinkedIn</span>
               </a>
             </div>
           </div>

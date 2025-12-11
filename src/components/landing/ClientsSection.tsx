@@ -9,7 +9,7 @@ const clients = [
 
 const testimonials = [
   {
-    quote: "SoftPro transformó completamente nuestra operación. Los dashboards nos dan visibilidad total del negocio.",
+    quote: "TecnoAtom transformó completamente nuestra operación. Los dashboards nos dan visibilidad total del negocio.",
     author: "María González",
     role: "CEO, TechCorp",
     initials: "MG",

@@ -1,7 +1,5 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { ContactForm } from "@/components/landing/ContactForm";
 
 const contactInfo = [
   {
@@ -17,7 +15,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    info: "contacto@softpro.com",
+    info: "contacto@tecnoatom.com",
   },
   {
     icon: Clock,
@@ -49,61 +47,7 @@ const ContactSection = () => {
             <h3 className="mb-6 text-2xl font-semibold text-foreground">
               Envíanos un mensaje
             </h3>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-foreground">
-                    Nombre
-                  </label>
-                  <Input
-                    placeholder="Tu nombre"
-                    className="bg-background"
-                  />
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-foreground">
-                    Empresa
-                  </label>
-                  <Input
-                    placeholder="Tu empresa"
-                    className="bg-background"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium text-foreground">
-                  Email
-                </label>
-                <Input
-                  type="email"
-                  placeholder="tu@email.com"
-                  className="bg-background"
-                />
-              </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium text-foreground">
-                  Teléfono
-                </label>
-                <Input
-                  type="tel"
-                  placeholder="+52 55 1234 5678"
-                  className="bg-background"
-                />
-              </div>
-              <div>
-                <label className="mb-2 block text-sm font-medium text-foreground">
-                  Mensaje
-                </label>
-                <Textarea
-                  placeholder="Cuéntanos sobre tu proyecto..."
-                  rows={4}
-                  className="bg-background"
-                />
-              </div>
-              <Button size="lg" className="w-full">
-                Enviar mensaje
-              </Button>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Contact Info */}
@@ -132,10 +76,16 @@ const ContactSection = () => {
             </div>
 
             {/* Map Placeholder */}
-            <div className="mt-8 h-48 overflow-hidden rounded-2xl bg-muted/50">
-              <div className="flex h-full items-center justify-center text-muted-foreground">
-                <MapPin size={48} className="opacity-30" />
-              </div>
+            <div className="mt-8 h-64 overflow-hidden rounded-2xl bg-muted/50">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15836.15051342214!2d-73.1160690300353!3d7.121637499241337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e681561e8533a6b%3A0xe707682456016d47!2sCl%2036%20%2327-71%2C%20Mejoras%20P%C3%BAblicas%2C%20Bucaramanga%2C%20Santander!5e0!3m2!1ses!2sco!4v1765417476443!5m2!1ses!2sco"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
