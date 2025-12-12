@@ -1,29 +1,27 @@
-import { Linkedin } from "lucide-react";
-
 const team = [
   {
-    name: "Roberto Sánchez",
-    role: "CEO & Fundador",
-    initials: "RS",
-    bio: "15+ años liderando proyectos de transformación digital.",
+    name: "Santiago Rondon",
+    role: "Cabeza de ventas",
+    initials: "SR",
+    bio: "Experiencia en ventas B2B de soluciones empresariales.",
   },
   {
-    name: "Laura Fernández",
+    name: "Kevin Vargas",
     role: "CTO",
-    initials: "LF",
-    bio: "Experta en arquitectura de software y soluciones cloud.",
+    initials: "KV",
+    bio: "Experto en arquitectura de software y soluciones cloud.",
   },
   {
-    name: "Miguel Torres",
-    role: "Director de Producto",
-    initials: "MT",
-    bio: "Especialista en UX y desarrollo de productos SaaS.",
+    name: "Harold Vargas",
+    role: "Diseñador",
+    initials: "HV",
+    bio: "Especialista en UI/UX y desarrollo de productos SaaS.",
   },
   {
-    name: "Carmen López",
-    role: "Head of Sales",
-    initials: "CL",
-    bio: "10+ años en ventas B2B de soluciones empresariales.",
+    name: "David Garzón",
+    role: "Desarrollador",
+    initials: "DG",
+    bio: "Experiencia en desarrollo de software y soluciones empresariales.",
   },
 ];
 
@@ -68,12 +66,7 @@ const TeamSection = () => {
 
               {/* Social Links */}
               <div className="flex justify-center gap-3">
-                <a
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-muted/50 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
-                >
-                  <Linkedin size={18} />
-                </a>
+
               </div>
             </div>
           ))}

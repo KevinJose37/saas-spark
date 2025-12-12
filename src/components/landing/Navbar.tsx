@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -43,45 +44,60 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2">
             <img
               src={isScrolled ? darkLogo : whiteLogo}
               alt="TecnoAtom"
               className="h-16 w-auto transition-all duration-300"
             />
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={`/${link.href}`}
                 className={`text-sm font-medium transition-colors hover:text-primary ${isScrolled ? "text-foreground/80" : "text-primary-foreground/80"
                   }`}
               >
                 {link.label}
               </a>
             ))}
-            <Dialog open={isQuoteOpen} onOpenChange={setIsQuoteOpen}>
-              <DialogTrigger asChild>
+            <div className="flex gap-4">
+              <Link to="/constructa">
                 <Button
                   size="sm"
+                  variant="outline"
                   className={`${isScrolled
-                    ? ""
+                    ? "border-primary text-primary hover:bg-primary/10"
                     : "bg-primary-foreground text-primary hover:bg-primary-foreground/90"
                     }`}
                 >
-                  Cotización
+                  Constructa
                 </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[600px]">
-                <DialogHeader>
-                  <DialogTitle>Solicitar Cotización</DialogTitle>
-                </DialogHeader>
-                <QuoteForm onSuccess={() => setIsQuoteOpen(false)} />
-              </DialogContent>
-            </Dialog>
+              </Link>
+              <Dialog open={isQuoteOpen} onOpenChange={setIsQuoteOpen}>
+                <DialogTrigger asChild>
+                  <Button
+                    size="sm"
+                    className={`${isScrolled
+                      ? ""
+                      : "bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                      }`}
+                  >
+                    Cotización
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[600px]">
+                  <DialogHeader>
+                    <DialogTitle>Solicitar Cotización</DialogTitle>
+                  </DialogHeader>
+                  <QuoteForm onSuccess={() => setIsQuoteOpen(false)} />
+                </DialogContent>
+              </Dialog>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -101,14 +117,22 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={`/${link.href}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="px-4 py-2 text-foreground/80 transition-colors hover:text-primary"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="px-4 pt-2">
+              <div className="flex flex-col gap-2 px-4 pt-2">
+                <Link to="/constructa" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button
+                    size="sm"
+                    className="w-full"
+                  >
+                    Constructa
+                  </Button>
+                </Link>
                 <Button
                   size="sm"
                   className="w-full"

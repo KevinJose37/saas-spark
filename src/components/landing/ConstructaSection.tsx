@@ -1,62 +1,70 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2 } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import constructaPreview from "@/assets/constructa-preview.png";
 
 const ConstructaSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-accent-foreground">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary-foreground/10 blur-3xl" />
-        <div className="absolute bottom-0 -left-20 h-60 w-60 rounded-full bg-accent/20 blur-3xl" />
+    <section className="relative overflow-hidden py-32">
+      {/* Abstract Background */}
+      <div className="absolute inset-0 bg-slate-950">
+        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-purple-500/20 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[100px]" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4">
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
-          {/* Text content */}
-          <div className="flex-1 text-center lg:text-left">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-4 py-2">
-              <Building2 className="h-5 w-5 text-primary-foreground" />
-              <span className="text-sm font-medium text-primary-foreground">
-                Proyecto Estrella
-              </span>
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md lg:p-12">
+          {/* Inner Glow */}
+          <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-primary/20 blur-3xl" />
+
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            {/* Content */}
+            <div className="relative z-10 space-y-8 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary-foreground">
+                <Sparkles className="h-4 w-4" />
+                <span>Nuestra Solución Premium</span>
+              </div>
+
+              <div>
+                <h2 className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl">
+                  Descubre <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Constructa</span>
+                </h2>
+                <p className="text-lg leading-relaxed text-slate-300 md:text-xl">
+                  La plataforma definitiva para la gestión de constructoras.
+                  Controla proyectos, finanzas y personal en un entorno
+                  diseñado para el futuro de la construcción.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+                <Link to="/constructa">
+                  <Button
+                    size="lg"
+                    className="group min-w-[200px] bg-gradient-to-r from-blue-600 to-purple-600 text-lg hover:from-blue-700 hover:to-purple-700"
+                  >
+                    Explorar Plataforma
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+                {/* <Link to="/constructa">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="min-w-[200px] border-white/10 bg-white/5 text-lg text-white hover:bg-white/10"
+                  >
+                    Ver Demo
+                  </Button>
+                </Link> */}
+              </div>
             </div>
 
-            <h2 className="mb-6 text-3xl font-bold text-primary-foreground md:text-4xl lg:text-5xl">
-              Conoce nuestro proyecto estrella:{" "}
-              <span className="bg-gradient-to-r from-primary-foreground to-accent bg-clip-text text-transparent">
-                Constructa
-              </span>
-            </h2>
-
-            <p className="mb-8 text-lg text-primary-foreground/80 md:text-xl">
-              Un aplicativo web integral diseñado específicamente para constructoras. 
-              Optimiza la operación de tus proyectos, gestiona materiales, órdenes de compra, 
-              locaciones y mucho más desde una sola plataforma.
-            </p>
-
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-              <Link to="/constructa">
-                <Button
-                  size="lg"
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold px-8 py-6 text-lg shadow-lg transition-all hover:shadow-xl group"
-                >
-                  Conocer más
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="flex-1">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-3xl bg-primary-foreground/5 blur-2xl" />
+            {/* Visual */}
+            <div className="relative lg:h-[500px]">
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 blur-3xl filter" />
               <img
                 src={constructaPreview}
-                alt="Dashboard de Constructa con analytics y gráficos de gestión de proyectos"
-                className="relative w-full max-w-xl mx-auto animate-float drop-shadow-2xl"
+                alt="Constructa Dashboard Interface"
+                className="relative z-11 w-full animate-float rounded-xl  transition-transform duration-500 hover:scale-[1.02]"
               />
             </div>
           </div>

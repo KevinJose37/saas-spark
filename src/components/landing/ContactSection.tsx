@@ -5,12 +5,12 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Dirección",
-    info: "Av. Reforma 123, CDMX, México",
+    info: "Cl 36 #27-71, Mejoras Públicas, Bucaramanga, Santander",
   },
   {
     icon: Phone,
     title: "Teléfono",
-    info: "+52 55 1234 5678",
+    info: "+57 314 2671185",
   },
   {
     icon: Mail,

@@ -15,9 +15,9 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 font-semibold">Enlaces</h4>
             <ul className="space-y-2 text-card/70">
-              <li><a href="#servicios" className="transition-colors hover:text-card">Servicios</a></li>
-              <li><a href="#nosotros" className="transition-colors hover:text-card">Nosotros</a></li>
-              <li><a href="#contacto" className="transition-colors hover:text-card">Contacto</a></li>
+              <li><a href="/#servicios" className="transition-colors hover:text-card">Servicios</a></li>
+              <li><a href="/#nosotros" className="transition-colors hover:text-card">Nosotros</a></li>
+              <li><a href="/#contacto" className="transition-colors hover:text-card">Contacto</a></li>
             </ul>
           </div>
 
@@ -26,7 +26,7 @@ const Footer = () => {
             <h4 className="mb-4 font-semibold">Contacto</h4>
             <ul className="space-y-2 text-card/70">
               <li>contacto@tecnoatom.com</li>
-              <li>+57 314 26711850</li>
+              <li>+57 314 2671185</li>
             </ul>
           </div>
         </div>

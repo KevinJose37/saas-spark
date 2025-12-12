@@ -6,7 +6,7 @@ import cardSales from "@/assets/card-sales.png";
 const benefits = [
   {
     title: "Clientes totales",
-    value: "61,000",
+    value: "+100",
     image: cardCustomers,
     alt: "Ilustración 3D de clientes satisfechos con gráfica de crecimiento",
   },
@@ -23,8 +23,8 @@ const benefits = [
     alt: "Gráfica 3D de crecimiento empresarial",
   },
   {
-    title: "Ventas",
-    value: "800+",
+    title: "Horas de trabajo ahorradas",
+    value: "+1000",
     image: cardSales,
     alt: "Icono de redes sociales y marketing digital",
   },

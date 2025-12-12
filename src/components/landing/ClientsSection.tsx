@@ -6,39 +6,17 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 const clients = [
-  { name: "TechCorp", initials: "TC" },
-  { name: "Innovate Labs", initials: "IL" },
-  { name: "Global Solutions", initials: "GS" },
-  { name: "DataFlow", initials: "DF" },
-  { name: "CloudBase", initials: "CB" },
-  { name: "SmartSys", initials: "SS" },
-  { name: "TechCorp", initials: "TC" },
-  { name: "Innovate Labs", initials: "IL" },
-  { name: "Global Solutions", initials: "GS" },
-  { name: "DataFlow", initials: "DF" },
-  { name: "CloudBase", initials: "CB" },
-  { name: "SmartSys", initials: "SS" },
-];
-
-const testimonials = [
-  {
-    quote: "TecnoAtom transformó completamente nuestra operación. Los dashboards nos dan visibilidad total del negocio.",
-    author: "María González",
-    role: "CEO, TechCorp",
-    initials: "MG",
-  },
-  {
-    quote: "La automatización que implementaron nos ahorró más de 200 horas mensuales en procesos manuales.",
-    author: "Carlos Rodríguez",
-    role: "Director de Operaciones, Innovate Labs",
-    initials: "CR",
-  },
-  {
-    quote: "Excelente equipo, profesionales y comprometidos. Superaron nuestras expectativas.",
-    author: "Ana Martínez",
-    role: "CTO, Global Solutions",
-    initials: "AM",
-  },
+  { name: "Cliente 1", logo: new URL('../../assets/cliente1.png', import.meta.url).href },
+  { name: "Cliente 2", logo: new URL('../../assets/cliente2.png', import.meta.url).href },
+  { name: "Cliente 3", logo: new URL('../../assets/cliente3.png', import.meta.url).href },
+  { name: "Cliente 4", logo: new URL('../../assets/cliente4.png', import.meta.url).href },
+  { name: "Cliente 5", logo: new URL('../../assets/cliente5.png', import.meta.url).href },
+  { name: "Cliente 6", logo: new URL('../../assets/cliente6.png', import.meta.url).href },
+  { name: "Cliente 7", logo: new URL('../../assets/cliente7.png', import.meta.url).href },
+  { name: "Cliente 8", logo: new URL('../../assets/cliente8.png', import.meta.url).href },
+  { name: "Cliente 9", logo: new URL('../../assets/cliente9.png', import.meta.url).href },
+  { name: "Cliente 10", logo: new URL('../../assets/cliente10.png', import.meta.url).href },
+  { name: "Cliente 11", logo: new URL('../../assets/cliente11.png', import.meta.url).href },
 ];
 
 const ClientsSection = () => {
@@ -59,7 +37,7 @@ const ClientsSection = () => {
         </div>
 
         {/* Client Logos */}
-        <div className="mb-16 w-full">
+        <div className="w-full">
           <Carousel
             plugins={[
               Autoplay({
@@ -76,39 +54,17 @@ const ClientsSection = () => {
             <CarouselContent className="-ml-8">
               {clients.map((client, index) => (
                 <CarouselItem key={index} className="pl-8 basis-1/2 md:basis-1/3 lg:basis-[22%]">
-                  <div className="flex h-32 items-center justify-center rounded-xl bg-background p-6 shadow-sm transition-all hover:shadow-md">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-xl font-bold text-primary">
-                      {client.initials}
-                    </div>
+                  <div className="flex h-40 items-center justify-center rounded-xl bg-background p-4 shadow-sm transition-all hover:shadow-md grayscale hover:grayscale-0">
+                    <img
+                      src={client.logo}
+                      alt={client.name}
+                      className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity"
+                    />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
           </Carousel>
-        </div>
-
-        {/* Testimonials */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="rounded-2xl bg-background p-8 shadow-md"
-            >
-              <div className="mb-6 text-4xl text-primary">"</div>
-              <p className="mb-6 text-foreground/80 italic">
-                {testimonial.quote}
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
-                  {testimonial.initials}
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
