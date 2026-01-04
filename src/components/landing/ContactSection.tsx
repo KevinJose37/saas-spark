@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Horario",
-    info: "Lun - Vie: 9:00 - 18:00",
+    info: "8:00 am a 7:00 pm",
   },
 ];
 

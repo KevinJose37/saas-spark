@@ -1,4 +1,4 @@
-import { Users, BarChart3, Zap, Settings, Cloud, Shield } from "lucide-react";
+import { Users, BarChart3, Zap, Settings, Building2, Briefcase, Globe, Smartphone } from "lucide-react";
 
 const services = [
   {
@@ -12,24 +12,34 @@ const services = [
     description: "Optimiza procesos repetitivos y aumenta la productividad de tu equipo.",
   },
   {
-    icon: Cloud,
-    title: "Integraciones Cloud",
-    description: "Conecta todas tus herramientas en un ecosistema unificado y eficiente.",
-  },
-  {
     icon: Settings,
     title: "Software a Medida",
     description: "Desarrollamos soluciones personalizadas que se adaptan a tu negocio.",
   },
   {
-    icon: Shield,
-    title: "Seguridad Empresarial",
-    description: "Protección de datos y cumplimiento normativo para tu tranquilidad.",
-  },
-  {
     icon: Users,
     title: "Consultoría IT",
     description: "Asesoría experta para transformar digitalmente tu organización.",
+  },
+  {
+    icon: Building2,
+    title: "Software ERP para Constructoras",
+    description: "Gestión integral de proyectos y recursos especializada para el sector construcción.",
+  },
+  {
+    icon: Briefcase,
+    title: "Asesorías Empresariales",
+    description: "Consultoría estratégica para optimizar tu modelo de negocio y procesos.",
+  },
+  {
+    icon: Globe,
+    title: "Páginas Web",
+    description: "Diseño y desarrollo de sitios web modernos, rápidos y optimizados para SEO.",
+  },
+  {
+    icon: Smartphone,
+    title: "Aplicaciones",
+    description: "Desarrollo de aplicaciones móviles y de escritorio intuitivas y robustas.",
   },
 ];
 

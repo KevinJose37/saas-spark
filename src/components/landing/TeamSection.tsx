@@ -1,9 +1,9 @@
 const team = [
   {
     name: "Santiago Rondon",
-    role: "Cabeza de ventas",
+    role: "CEO",
     initials: "SR",
-    bio: "Experiencia en ventas B2B de soluciones empresariales.",
+    bio: "Dirección estratégica para el crecimiento de soluciones empresariales y tecnológicas.",
   },
   {
     name: "Kevin Vargas",
@@ -22,6 +22,18 @@ const team = [
     role: "Desarrollador",
     initials: "DG",
     bio: "Experiencia en desarrollo de software y soluciones empresariales.",
+  },
+  {
+    name: "Katherinne Valderrama",
+    role: "Diseñadora UX/UI",
+    initials: "KV",
+    bio: "Diseño de experiencias digitales intuitivas, funcionales y centradas en el usuario.",
+  },
+  {
+    name: "Juan Gooner",
+    role: "Desarrollador web y SEO",
+    initials: "JG",
+    bio: "Desarrollo de sitios web optimizados y estrategias SEO orientadas a resultados.",
   },
 ];
 
@@ -47,7 +59,8 @@ const TeamSection = () => {
           {team.map((member, index) => (
             <div
               key={index}
-              className="group rounded-2xl bg-card p-6 text-center shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className={`group rounded-2xl bg-card p-6 text-center shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${index === 4 ? "lg:col-start-2" : ""
+                }`}
             >
               {/* Avatar */}
               <div className="mx-auto mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent-foreground text-3xl font-bold text-primary-foreground shadow-lg">

@@ -17,14 +17,14 @@ const benefits = [
     alt: "Gráfica de barras colorida mostrando análisis de datos",
   },
   {
-    title: "Crecimiento general",
-    subtitle: "Métricas clave",
+    title: "Presencia en mas de 4 paises",
+    subtitle: "Expansión internacional",
     image: cardGrowth,
     alt: "Gráfica 3D de crecimiento empresarial",
   },
   {
-    title: "Horas de trabajo ahorradas",
-    value: "+1000",
+    title: "Alianzas estrategicas activas",
+    value: "+10",
     image: cardSales,
     alt: "Icono de redes sociales y marketing digital",
   },

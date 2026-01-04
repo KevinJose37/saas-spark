@@ -18,6 +18,8 @@ import { toast } from "sonner";
 const formSchema = z.object({
     name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
     email: z.string().email("Email inválido"),
+    phone: z.string().optional(),
+    company: z.string().optional(),
     message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
 });
 
@@ -33,6 +35,8 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         defaultValues: {
             name: "",
             email: "",
+            phone: "",
+            company: "",
             message: "",
         },
     });
@@ -89,6 +93,32 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
                             <FormLabel>Email</FormLabel>
                             <FormControl>
                                 <Input placeholder="tu@email.com" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Número de contacto (opcional)</FormLabel>
+                            <FormControl>
+                                <Input placeholder="+57 300 000 0000" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="company"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Nombre de la empresa (opcional)</FormLabel>
+                            <FormControl>
+                                <Input placeholder="Tu empresa" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
